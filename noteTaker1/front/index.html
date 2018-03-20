@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8"/>
+    <link rel="stylesheet" href="./css/index.css">
+	<link rel="stylesheet" href="./css/login.css">
+    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css'>
+    <link rel='stylesheet prefetch' href='http://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+</head>
+
+<body>
+
+    <div id = "firstView" style = "display: none" class = "main_view">
+      <nav class="navbar navbar-default banner">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" >Note Taker</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right navbar-nav-primary">
+                <li>
+                  <!-- should be action="/search" method="post" role="search" -->
+                  <form class="search-container" action="" onsubmit="sendToPage()">
+                    <input id="search-box" type="text" class="search-box" placeholder="Search a project">
+                    <label for="search-box"><span class="glyphicon glyphicon-search search-icon"></span></label>
+                    <input type="submit" id="search-submit"/>
+                  </form>
+                </li>
+                <li><a id="username">Leo</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <div id = "content-container">
+            <div id = "notes-list"></div>
+
+            <div id = "editor-box">
+                <div class = "input">
+                    <textarea id = "note-string"></textarea>
+                    <button type="button" id="save-button" onclick="saveNote()" >Save</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id = "thirdView" style = "display: block" class = "main_view">
+        <div class="container" id="login-container">
+            <div class="imgcontainer">
+                <img src="photos/avatar_empty.png" alt="Avatar" class="avatar">
+            </div>
+
+            <label class="login-label"><b>Username</b></label>
+            <input class="login-input" placeholder="Enter Username" id="uname" required>
+
+            <label class="login-label"><b>Password</b></label>
+            <input class="login-input" type="password" placeholder="Enter Password" id="upass" required>
+            <button id="loginbtn" onclick="loginFun()">Login</button>
+            <button id="register" onclick="regisFun()">Register</button>
+
+        </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/login.js"></script>
+
+</body>
+</html>

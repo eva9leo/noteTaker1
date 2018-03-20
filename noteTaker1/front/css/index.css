@@ -1,0 +1,266 @@
+body{
+  background: white;
+  height: 100%;
+}
+.navbar{
+  padding-top: 10px;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+.navbar-brand{
+  padding: 10px;
+}
+#login{
+  padding: 10px;
+}
+#newproject{
+  padding: 10px;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+.portrait {
+    height: auto;
+    width: auto;
+}
+
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 340px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .grid {
+    max-width: 1200px;
+  }
+}
+.card {
+  position: relative;
+  flex: 1 1 100%;
+  margin: 31px 0;
+  padding: 20px;
+  background: white;
+  z-index: 0;
+}
+@media screen and (min-width: 768px) {
+  .card {
+    flex-basis: calc(33.33% - (62px + 40px));
+    margin: 0 31px;
+  }
+}
+.list-group-item{
+  border: none;
+}
+.card__thumb {
+  overflow: hidden;
+}
+
+.card__img {
+  margin: -20px -20px 0;
+}
+.card__img img {
+  max-width: 100%;
+  height: auto;
+  border: 0;
+  vertical-align: middle;
+  box-sizing: border-box;
+}
+.card__desc {
+  margin-top: 30px;
+}
+.card__one {
+  transition: transform .5s;
+}
+.card__one::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
+  content: '';
+  opacity: 0;
+  z-index: -1;
+}
+.card__one:hover, .card__one:focus {
+  transform: scale3d(1.006, 1.006, 1);
+}
+.card__one:hover::after, .card__one:focus::after {
+  opacity: 1;
+}
+
+
+
+.search-box {
+  -webkit-transition: width 0.6s, border-radius 0.6s, background 0.6s, -webkit-box-shadow 0.6s;
+  transition: width 0.6s, border-radius 0.6s, background 0.6s, -webkit-box-shadow 0.6s;
+  transition: width 0.6s, border-radius 0.6s, background 0.6s, box-shadow 0.6s;
+  transition: width 0.6s, border-radius 0.6s, background 0.6s, box-shadow 0.6s, -webkit-box-shadow 0.6s;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  background: #ebebeb;
+}
+.search-box + label .search-icon {
+  color: black;
+}
+.search-box:hover {
+  color: white;
+  background: #c8c8c8;
+  -webkit-box-shadow: 0 0 0 5px #3d4752;
+          box-shadow: 0 0 0 5px #3d4752;
+}
+.search-box:hover + label .search-icon {
+  color: white;
+}
+.search-box:focus {
+  -webkit-transition: width 0.6s cubic-bezier(0, 1.22, 0.66, 1.39), border-radius 0.6s, background 0.6s;
+  transition: width 0.6s cubic-bezier(0, 1.22, 0.66, 1.39), border-radius 0.6s, background 0.6s;
+  border: none;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding-left: 15px;
+  cursor: text;
+  width: 350px;
+  border-radius: auto;
+  background: #ebebeb;
+  color: black;
+}
+.search-box:focus + label .search-icon {
+  color: black;
+}
+.search-box:not(:focus) {
+  text-indent: -5000px;
+}
+
+#search-submit {
+  position: relative;
+  left: -5000px;
+}
+
+.search-icon {
+  position: relative;
+  left: -30px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Stuffs added to change style of projects*/
+
+.thumbnail
+{
+    margin-bottom: 20px;
+    padding: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+  min-width: 200px;
+}
+
+.item.list-group-item
+{
+    float: none;
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+.item.list-group-item:nth-of-type(odd):hover,.item.list-group-item:hover
+{
+    background: #428bca;
+}
+
+.item.list-group-item .list-group-image
+{
+    margin-right: 10px;
+}
+.item.list-group-item .thumbnail
+{
+    margin-bottom: 0px;
+}
+.item.list-group-item .caption
+{
+    padding: 9px 9px 0px 9px;
+}
+.item.list-group-item:nth-of-type(odd)
+{
+    background: #eeeeee;
+}
+
+.item.list-group-item:before, .item.list-group-item:after
+{
+    display: table;
+    content: " ";
+}
+
+.item.list-group-item img
+{
+    float: left;
+}
+.item.list-group-item:after
+{
+    clear: both;
+}
+.list-group-item-text
+{
+    margin: 0 0 11px;
+}
+
+.skillTags {
+  width: 76px;
+  height: 30px;
+  border: 1px solid #e5e5e5;
+  border-radius: 0.5rem;
+  text-align: center;
+  background-color: #c2c2d6;
+}
+
+.wrapper {
+    display: flex;
+    flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+body {
+  min-width:700px;
+}
+
+/* ends here*/
+
+/* editor part starts here */
+html{
+  height: 100%;
+}
+#firstView{
+  height: 100%;
+}
+
+#content-container {
+  width:100%;
+  height:100%;
+}
+
+#notes-list {
+  float: left;
+  width:40%;
+  height:100%;
+}
+
+#editor-box {
+  border-left: solid 5px;
+  float: left;
+  width:60%;
+  height:100%;
+  border-color: #a3a3c2;
+}
