@@ -14,7 +14,7 @@ function renderMainView(){
 
 function saveNote(){
 	var unsaved = document.getElementById("note-string").value;
-	if (unsaved.lenght == 0) {
+	if (unsaved.length == 0) {
 		console.log('empty string!');
 	} else {
 		console.log(unsaved);
